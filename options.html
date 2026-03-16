@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Converter Settings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h1>Time Converter</h1>
+        </header>
+
+        <main>
+            <div class="setting-group">
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <h2>Extension Enabled</h2>
+                        <p>Turn the time conversion on or off globally.</p>
+                    </div>
+                    <label class="toggle">
+                        <input type="checkbox" id="extensionEnabled">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="setting-group" style="animation-delay: 0.1s;">
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <h2>Time Format</h2>
+                        <p>Choose between 12-hour and 24-hour display.</p>
+                    </div>
+                    <select id="timeFormat" class="dropdown">
+                        <option value="12h">12-hour (e.g., 2:30 PM)</option>
+                        <option value="24h">24-hour (e.g., 14:30)</option>
+                    </select>
+                </div>
+                
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <h2>Display Mode</h2>
+                        <p>How the converted time will appear on the page.</p>
+                    </div>
+                    <select id="displayMode" class="dropdown">
+                        <option value="tooltip">Hover Tooltip</option>
+                        <option value="inline">Inline Text</option>
+                    </select>
+                </div>
+
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <h2>Target Timezone</h2>
+                        <p>Override your local timezone for conversions.</p>
+                    </div>
+                    <select id="targetTimezone" class="dropdown">
+                        <option value="local">System Default (Local)</option>
+                        <option value="America/New_York">Eastern Time (ET/EST/EDT)</option>
+                        <option value="America/Chicago">Central Time (CT/CST/CDT)</option>
+                        <option value="America/Denver">Mountain Time (MT/MST/MDT)</option>
+                        <option value="America/Los_Angeles">Pacific Time (PT/PST/PDT)</option>
+                        <option value="Europe/London">UK Time (GMT/BST)</option>
+                        <option value="Europe/Berlin">Central European Time (CET/CEST)</option>
+                        <option value="Asia/Tokyo">Japan Standard Time (JST)</option>
+                        <option value="Australia/Sydney">Australian Eastern Time (AEST/AEDT)</option>
+                        <option value="UTC">Coordinated Universal Time (UTC)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="status-message" id="statusMessage">Settings saved automatically!</div>
+        </main>
+    </div>
+    <script src="options.js"></script>
+</body>
+</html>

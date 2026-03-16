@@ -1,0 +1,29 @@
+/* styles.css */
+
+.time-converter {
+  position: relative;
+  cursor: help;
+  border-bottom: 2px dotted #6366f1;
+  background-color: rgba(99, 102, 241, 0.1);
+  padding: 0 2px;
+  border-radius: 3px;
+  color: inherit;
+  transition: background-color 0.2s, border-bottom-color 0.2s;
+}
+
+.time-converter:hover {
+  background-color: rgba(99, 102, 241, 0.25);
+  border-bottom-color: #4f46e5;
+}
+
+/* Removed pseudo tooltip elements */
+
+.time-converter-inline {
+  background-color: rgba(74, 222, 128, 0.15);
+  border: 1px solid rgba(74, 222, 128, 0.4);
+  padding: 1px 4px;
+  border-radius: 4px;
+  font-weight: 500;
+  margin: 0 2px;
+  color: inherit;
+}
