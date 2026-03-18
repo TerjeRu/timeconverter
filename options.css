@@ -196,3 +196,50 @@ input:checked + .slider:before {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Permitted Sites */
+.site-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.site-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--surface-light);
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.site-item-host {
+    word-break: break-all;
+    margin-right: 12px;
+}
+
+.site-remove-btn {
+    background: none;
+    border: 1px solid rgba(248, 113, 113, 0.3);
+    color: #f87171;
+    font-size: 12px;
+    font-family: inherit;
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s;
+}
+
+.site-remove-btn:hover {
+    background: rgba(248, 113, 113, 0.15);
+}
+
+.no-sites {
+    font-size: 13px;
+    color: var(--text-muted);
+    text-align: center;
+    margin: 0;
+    padding: 8px 0;
+}

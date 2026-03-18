@@ -1,5 +1,11 @@
 // contentScript.js
 
+// Prevent double-initialization when injected programmatically
+if (window.__timeConverterInitialized) {
+    // Already running on this page
+} else {
+window.__timeConverterInitialized = true;
+
 // Import Luxon
 const { DateTime } = luxon;
 
@@ -234,7 +240,7 @@ chrome.storage.sync.get(settings, (loadedSettings) => {
 chrome.storage.onChanged.addListener((changes, area) => {
     if (area === 'sync') {
         let reloadRequired = false;
-        
+
         for (let [key, { newValue }] of Object.entries(changes)) {
             settings[key] = newValue !== undefined ? newValue : settings[key];
             if (key !== 'extensionEnabled') reloadRequired = true;
@@ -245,3 +251,5 @@ chrome.storage.onChanged.addListener((changes, area) => {
         }
     }
 });
+
+} // end of double-init guard
