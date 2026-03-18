@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Time Converter",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Browser extension that converts displayed times to your local time.",
   "permissions": ["scripting", "storage", "activeTab"],
   "optional_host_permissions": ["<all_urls>"],
