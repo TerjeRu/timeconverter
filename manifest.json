@@ -3,7 +3,7 @@
   "name": "Time Converter",
   "version": "0.10",
   "description": "Browser extension that converts displayed times to your local time.",
-  "permissions": ["scripting", "storage"],
+  "permissions": ["storage"],
   "options_ui": {
     "page": "options.html",
     "open_in_tab": true
