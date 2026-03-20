@@ -3,8 +3,8 @@
   "version": "1.1.1",
   "description": "Browser extension that converts displayed times to your local time.",
   "scripts": {
-    "build:chrome": "zip -r dist/timeconverter-chrome.zip . --exclude '*.git*' --exclude 'dist/*' --exclude 'package.json' --exclude '*.md' --exclude '.gitignore'",
-    "build:firefox": "zip -r dist/timeconverter-firefox.zip . --exclude '*.git*' --exclude 'dist/*' --exclude 'package.json' --exclude '*.md' --exclude '.gitignore'",
-    "build": "mkdir -p dist && npm run build:chrome && npm run build:firefox"
+    "build:chrome": "mkdir -p dist && zip -r dist/timeconverter-chrome.zip . --exclude '*.git*' --exclude 'dist/*' --exclude 'package.json' --exclude '*.md' --exclude '.gitignore'",
+    "build:firefox": "mkdir -p dist && zip -r dist/timeconverter-firefox.zip . --exclude '*.git*' --exclude 'dist/*' --exclude 'package.json' --exclude '*.md' --exclude '.gitignore'",
+    "build": "npm run build:chrome && npm run build:firefox"
   }
 }
