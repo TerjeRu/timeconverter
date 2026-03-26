@@ -13,16 +13,22 @@ Automatically detect and convert timezones on the fly right in your browser.
 Rather than injecting into every page you visit, Time Converter uses optional host permissions. When you visit a site where you'd like time conversion:
 
 1. Click the Time Converter icon in your toolbar.
-2. Click **Enable on this site** — Chrome will prompt you to confirm.
+2. Click **Enable on this site** — your browser will prompt you to confirm.
 3. Times on that site are converted automatically from now on.
 
 You can revoke access per-site from the popup or from the settings page.
 
-## Installation
+## Install
+
+**Chrome**: [Chrome Web Store](https://chromewebstore.google.com/detail/time-converter/higfpoeblhacdikajoplpnpjpocpphmp)
+
+**Firefox**: Coming soon on [Mozilla Add-ons](https://addons.mozilla.org)
+
+### Load from source
 1. Clone or download this repository.
-2. Navigate to `chrome://extensions` in Chromium/Chrome.
-3. Enable **Developer mode** in the top right corner.
-4. Click **Load unpacked** and select the folder containing the extension files.
+2. Navigate to `chrome://extensions` (Chrome) or `about:debugging#/runtime/this-firefox` (Firefox).
+3. Chrome: Enable **Developer mode**, click **Load unpacked** and select the extension folder.
+4. Firefox: Click **Load Temporary Add-on** and select `manifest.json`.
 
 ## Built With
 - **Vanilla JavaScript & CSS** for lightweight, blazing fast execution without bulky frameworks.
